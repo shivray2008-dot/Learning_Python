@@ -1,0 +1,11 @@
+# Python program to generate the series: 9, 99, 8, 89, 7, 79, ...
+# The series pairs each descending digit from 9 with that digit followed by 9.
+
+n = int(input("Enter the number of pairs to generate: "))
+
+result = []
+for i in range(9, 9 - n, -1):
+    result.append(str(i))
+    result.append(str(i * 10 + 9))
+
+print(','.join(result))
